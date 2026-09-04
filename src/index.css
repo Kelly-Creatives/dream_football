@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply box-border m-0 p-0;
+  }
+}
+
+@layer utilities {
+  .pulse-shadow {
+    animation: pulseShadow 2.5s infinite;
+  }
+}
+
+@keyframes pulseShadow {
+  0%, 100% { box-shadow: 0 6px 24px rgba(34,148,42,0.35); }
+  50% { box-shadow: 0 6px 40px rgba(34,148,42,0.65), 0 0 0 8px rgba(34,148,42,0.1); }
+}
